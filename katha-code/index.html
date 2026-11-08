@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFF7EA">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="खेल खेल में">
+  <title>कथा कोड · खेल खेल में</title>
+  <link rel="stylesheet" href="css/katha.css">
+  <style>
+    @font-face { font-family: "Baloo 2"; src: url("../Baloo2.ttf") format("truetype"); font-weight: 400 800; font-display: swap; }
+    html, body { margin: 0; height: 100%; background: #FFF7EA; overflow: hidden; overscroll-behavior: none; -webkit-text-size-adjust: 100%; }
+    #katha-root { position: fixed; top: 0; right: 0; bottom: 0; left: 0; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+    .katha-code { font-family: "Baloo 2", "Noto Sans Devanagari", "Kohinoor Devanagari", sans-serif; }
+  </style>
+</head>
+<body>
+  <div id="katha-root"></div>
+
+  <script src="js/art.js"></script>
+  <script src="js/art-people.js"></script>
+  <script src="js/art-places.js"></script>
+  <script src="js/kits.js"></script>
+  <script src="js/kits-ramayan.js"></script>
+  <script src="js/kits-gita.js"></script>
+  <script src="js/kits-upanishad.js"></script>
+  <script src="js/blocks.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/runtime.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/picker.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/parents.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Part of खेल खेल में: the back button on Katha Code's home screen returns to the game list.
+    window.KathaCode.mount(document.getElementById('katha-root'), {
+      lang: 'hi',
+      storageKey: 'katha-code',
+      onExit: function () { location.href = '../index.html#games'; }
+    });
+  </script>
+</body>
+</html>
